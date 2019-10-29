@@ -27,7 +27,15 @@ public class MatrixMath
      */
     public int[] rowSum()
     {
-        return null;
+        int sum =0;
+        for (int row=0; row<data.length; row++)
+        {
+                for ( int col=0; col<data.length; col++)
+                {
+                    
+                }
+        }
+        
     }
     
         /**
