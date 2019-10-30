@@ -16,7 +16,7 @@ public class MatrixMath
     public MatrixMath(int[][] data)
     {
         // initialise instance variables
-       
+       this.data = data;
     }
 
     /**
@@ -27,16 +27,17 @@ public class MatrixMath
      */
     public int[] rowSum()
     {
-        int rowSum = new int(data.length);
-        for (int row=0; row<data.length; row++)
+        int[]sumRow = new int[data.length];
+        for (int i=0; i<data.length; i++)
         {
-                for ( int col=0; col<data.length; col++)
+                int sum = 0;
+                for ( int j=0; j<data[i].length; j++)
                 {
-                   sum+=data[row][col];
+                   sum+=data[i][j];
                 }
-                sum[row]=sum;
+                sumRow[i]=sum;
         }
-        return rowSum;
+        return sumRow;
     }
     
         /**
@@ -46,7 +47,14 @@ public class MatrixMath
      */
     public double[] rowAve()
     {
-        return null;
+        double[] aveRow = new double [data.length];
+        int[] rowSums = rowSum();
+        
+        for (int i=0; i<data.length;i++)
+        {
+            aveRow[i]=(double)rowSums[i]/data[i].length;
+        }
+        return aveRow;
     }
     
         /**
@@ -57,7 +65,17 @@ public class MatrixMath
      */
     public int[] colSum()
     {
-        return null;
+        int[] colRow = new int[data.length];
+        for (int j=0; j<data.length; j++)
+        {
+                int sum = 0;
+                for ( int i=0; j<data[j].length; i++)
+                {
+                   sum+=data[j][i];
+                }
+                colRow[j]=sum;
+        }
+        return colRow;
     }
     
      /**
@@ -67,7 +85,14 @@ public class MatrixMath
      */
     public double[] colAve()
     {
-        return null;
+        double[] colRow = new double [data.length];
+        int[] colSums = colSum();
+        
+        for (int i=0; i<data.length;i++)
+        {
+            colRow[i]=(double)colSums[i]/data[i].length;
+        }
+        return colRow;
     }
     
 }

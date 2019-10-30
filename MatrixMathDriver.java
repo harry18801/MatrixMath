@@ -18,16 +18,38 @@ public class MatrixMathDriver
 		/* TODO
 		 * Use Arrays.toString on the results below
 		 */
-	System.out.println(Arrays.toString(mathA.rowSum()));
-        mathA.rowSum();
+	mathA.rowSum();
+	System.out.println("A rowSum is " + Arrays.toString(mathA.rowSum()));
+	mathA.colSum();
+        System.out.println("A colSum is " + Arrays.toString(mathA.colSum()));
         mathA.rowAve();
-        mathA.colSum();
+        System.out.println("A rowAve is " + Arrays.toString(mathA.rowAve()));
         mathA.colAve();
+        System.out.println("A colAve is " + Arrays.toString(mathA.colAve()));
         
         MatrixMath mathB = new MatrixMath(B);
-        mathB.rowSum();
-        mathB.rowAve();
-        mathB.colSum();
-        mathB.colAve();
+        
+        mathA.rowSum();
+	System.out.println("B rowSum is " + Arrays.toString(mathB.rowSum()));
+	mathA.colSum();
+        System.out.println("B colSum is " + Arrays.toString(mathB.colSum()));
+        mathA.rowAve();
+        System.out.println("B rowAve is " + Arrays.toString(mathB.rowAve()));
+        mathA.colAve();
+        System.out.println("B colAve is " + Arrays.toString(mathB.colAve()));
+        
+        MatrixMath mathC = new MatrixMath(C);
+        
+        mathA.rowSum();
+	System.out.println("C rowSum is " + Arrays.toString(mathC.rowSum()));
+	mathA.colSum();
+        System.out.println("C colSum is " + Arrays.toString(mathC.colSum()));
+        mathA.rowAve();
+        System.out.println("C rowAve is " + Arrays.toString(mathC.rowAve()));
+        mathA.colAve();
+        System.out.println("C colAve is " + Arrays.toString(mathC.colAve()));
+        
+        
+        
     }
 }
