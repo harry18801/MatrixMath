@@ -69,7 +69,7 @@ public class MatrixMath
         for (int j=0; j<data.length; j++)
         {
                 int sum = 0;
-                for ( int i=0; j<data[j].length; i++)
+                for ( int i=0; i<data[j].length; i++)
                 {
                    sum+=data[j][i];
                 }
